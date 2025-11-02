@@ -82,6 +82,7 @@ export default function Home() {
               { href: "#galeri", label: "Galeri" },
               { href: "#planlar", label: "Planlar" },
               { href: "#katplanlari", label: "Kat Planları" },
+              { href: "#odeme-plani", label: "Ödeme Planı" },
               { href: "#konum", label: "Konum" },
               { href: "#iletisim", label: "İletişim" },
             ].map((l) => (
@@ -104,6 +105,7 @@ export default function Home() {
               { href: "#galeri", label: "Galeri" },
               { href: "#planlar", label: "Planlar" },
               { href: "#katplanlari", label: "Kat Planları" },
+              { href: "#odeme-plani", label: "Ödeme Planı" },
               { href: "#konum", label: "Konum" },
               { href: "#iletisim", label: "İletişim" },
             ].map((l) => (
@@ -141,11 +143,13 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* Proje Özeti */}
+      
+
+      {/* Proje Bilgileri */}
       <motion.section id="proje" className="bg-light-gray text-navy" {...fade}>
         <div className="mx-auto max-w-6xl px-4 sm:px-6 py-16 sm:py-20">
           <div className="rounded-2xl bg-white shadow-md p-5 sm:p-10">
-            <h2 className="font-heading text-2xl sm:text-3xl font-semibold">Proje Özeti</h2>
+            <h2 className="font-heading text-2xl sm:text-3xl font-semibold">Proje Bilgileri</h2>
             <p className="mt-2 text-navy/80">
               SS İzmir Mavi Ada Konut Yapı Kooperatifi, İzmir Menemen Yahşelli Mah. 165 Ada 7 Parsel’de konumlanan, modern mimariye ve kooperatif güvencesine sahip 2 bloklu lüks yaşam projesidir. Her detayıyla konfor, güvenlik ve dayanıklılık esas alınarak tasarlanmıştır.
             </p>
@@ -315,6 +319,28 @@ export default function Home() {
                 <img src={img.src} alt={img.alt} className="h-72 w-full object-contain transition-transform duration-300 group-hover:scale-105" />
               </button>
             ))}
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Ödeme Planı */}
+      <motion.section id="odeme-plani" className="bg-[#F6F8FA]" {...fade}>
+        <div className="max-w-5xl mx-auto py-16 px-4 text-center">
+          <div className="bg-white shadow-md rounded-2xl p-8 md:p-10 transition-transform hover:scale-105">
+            <h2 className="text-3xl font-bold text-[#0A2E50] text-center">Ödeme Planı</h2>
+            <p className="text-lg text-center text-gray-600 mt-2">
+              Kooperatif üyeleri, her ay 30.000 TL aidat ödemesi yapar. Bu ödemeler 2026 yılında gerçekleştirilecek Genel Kurula kadar devam edecektir.
+            </p>
+            <div className="bg-gradient-to-r from-[#0077B6] to-[#00B4D8] rounded-xl text-white p-6 mt-6 text-center">
+              <h3 className="text-2xl md:text-3xl font-semibold">Aylık Aidat: 30.000 TL</h3>
+              <p className="mt-1 text-sm md:text-base text-white/90">2026’daki Genel Kurul’a kadar geçerlidir.</p>
+            </div>
+            <div className="bg-amber-50 border border-amber-200 text-amber-800 rounded-xl p-4 mt-6">
+              Aidat tutarları Genel Kurul kararlarına göre güncellenebilir. Detaylı ödeme koşulları kooperatif yönetimi tarafından duyurulmaktadır.
+            </div>
+            <a href="#iletisim" className="inline-block bg-gradient-to-r from-[#0077B6] to-[#00B4D8] text-white rounded-full px-6 py-3 mt-8 hover:brightness-110">
+              Kooperatif İletişim ve Bilgi Al
+            </a>
           </div>
         </div>
       </motion.section>
